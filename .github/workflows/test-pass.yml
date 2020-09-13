@@ -1,8 +1,5 @@
 name: chatops
 on:
-  issue_comment:
-    types: [ created ]
-
   check_suite:
     types: [ completed ]
 
@@ -28,7 +25,7 @@ jobs:
             console.log('Greeting');
 
             let message = `
-              @${creator} thanks
+              @${creator} all tests passed
               `;
 
             await github.issues.createComment({
