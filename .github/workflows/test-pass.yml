@@ -24,7 +24,6 @@ jobs:
 
             console.log('Greeting');
 
-            let firstTimeContributor = true;
             let message = `
               @${creator} thanks
               `;
