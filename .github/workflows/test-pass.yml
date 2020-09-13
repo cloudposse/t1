@@ -1,7 +1,10 @@
 name: chatops
 on:
+  issue_comment:
+    types: [ created ]
+
   check_suite:
-    types: [completed]
+    types: [ completed ]
 
 jobs:
 
@@ -24,7 +27,6 @@ jobs:
 
             console.log('Greeting');
 
-            let firstTimeContributor = true;
             let message = `
               @${creator} thanks
               `;
