@@ -20,10 +20,10 @@ jobs:
           github-token: ${{secrets.PUBLIC_REPO_ACCESS_TOKEN}}
           script: |
 
-            const issueNumber = ${{ context.issue.number }};
-            const owner = '${{ context.repo.owner }}';
-            const repo = '${{ context.repo.repo }}';
-            const creator = '${{ context.payload.sender.login }}';
+            const issueNumber = context.issue.number;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const creator = context.payload.sender.login;
 
             console.log('Greeting');
 
